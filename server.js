@@ -8,8 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 if (!process.env.AITUNNEL_API_KEY) {
-    console.error('ОШИБКА: AITUNNEL_API_KEY не найден в .env файле');
-    process.exit(1);
+    console.warn('ПРЕДУПРЕЖДЕНИЕ: AITUNNEL_API_KEY не найден. Убедитесь, что переменная окружения установлена.');
 }
 app.post('/api/chat', async (req, res) => {
     try {
@@ -48,7 +47,7 @@ app.post('/api/chat', async (req, res) => {
     }
 });
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'ИИ помошник.html'));
+    res.sendFile(path.join(__dirname, 'ИИ помощник.html'));
 });
 app.listen(PORT, () => {
     console.log(`Сервер запущен на http://localhost:${PORT}`);

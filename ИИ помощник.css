@@ -168,4 +168,24 @@ body {
     .message-content {
         font-size: 14px;
     }
+    .chat-input-container {
+        padding: 15px;
+    }
+    .input-wrapper {
+        gap: 10px;
+    }
+    #userInput {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    .send-button {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        min-height: 45px;
+    }
+    .send-button svg {
+        width: 18px;
+        height: 18px;
+    }
 }
